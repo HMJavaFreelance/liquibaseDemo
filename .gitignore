@@ -1,35 +1,31 @@
-# Add any directories, files, or patterns you don't want to be tracked by version control
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
 
-#Files
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
-*.jar
-*.war
-*.ear
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
-#directories
-**/.settings/
-**/.sonar/
-**/target/
-**/bin/
-**/node_modules/
-**/.vscode/
-**/.idea/
-**/.mvn/
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
 
-#Class
-*.classpath
-*.DS_Store
-*.class
-*.txt
-
-#Eclipse_workspace_data
-**/.metadata/
-
-#IDE_specific_files
-**/.project
-**/nb-configuration.xml
-**/.factorypath
-**/.package.json
-**/.package-lock.json
-**/.eslintrc.json
-**/.jshintrc.json
+### VS Code ###
+.vscode/
