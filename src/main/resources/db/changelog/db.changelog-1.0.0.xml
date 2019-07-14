@@ -4,32 +4,23 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 	
 	<changeSet author="Admin (generated)" id="1503460396396-1">
-		<createTable tableName="employee_log_table">
-			<column autoIncrement="true" name="employee_id" type="INT">
+		<createTable tableName="dbo.deploys">
+			<column autoIncrement="true" name="dbo.deploys_pk" type="INT">
 				<constraints primaryKey="true" />
 			</column>
-			<column name="email" type="VARCHAR(255)" />
-			<column name="employee_name" type="VARCHAR(255)" />
-			<column name="salary" type="DOUBLE" />
+			<column name="ticketNo" type="VARCHAR(10)" />
+			<column name="version_Tag" type="VARCHAR(10)" />
 		</createTable>
 	</changeSet>
-	
-	<changeSet author="Admin (generated)" id="1503460396396-2">
-		<createIndex indexName="EMAIL_INDEX" tableName="employee_log_table">
-			<column name="email" />
-		</createIndex>
-	</changeSet>
-	
-	<changeSet id="1503460396396-3" author="Admin (generated)">
-		<insert tableName="employee_log_table">
-			<column name="employee_name" value="Rocky"></column>
-			<column name="email" value="rock.s@yahoo.com"></column>
-			<column name="salary" valueNumeric="80000.00"></column>
+		
+	<changeSet id="1503460396396-2" author="Admin (generated)">
+		<insert tableName="dbo.deploys">
+			<column name="ticketNo" value="12"></column>
+			<column name="version_Tag" value="Tag 12"></column>
 		</insert>
-		<insert tableName="employee_log_table">
-			<column name="employee_name" value="Martin"></column>
-			<column name="email" value="martin.s@yahoo.com"></column>
-			<column name="salary" valueNumeric="70000.00"></column>
+		<insert tableName="dbo.deploys">
+			<column name="ticketNo" value="13"></column>
+			<column name="version_Tag" value="Tag 13"></column>
 		</insert>
 	</changeSet>
 </databaseChangeLog>

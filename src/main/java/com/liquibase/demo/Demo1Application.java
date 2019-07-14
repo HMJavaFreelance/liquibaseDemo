@@ -19,9 +19,9 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
-@SpringBootApplication(exclude = HibernateJpaAutoConfiguration.class)
+@SpringBootApplication
 @ComponentScan("com.liquibase")
-@EnableAutoConfiguration
+@EnableAutoConfiguration(exclude = HibernateJpaAutoConfiguration.class)
 @EnableTransactionManagement
 public class Demo1Application {	
 	
